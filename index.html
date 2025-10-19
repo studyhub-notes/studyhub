@@ -148,23 +148,78 @@ for(let i=0;i<languages.length;i++){
 </section>
 
 <!-- ✅ Affiliate Marketing Section -->
-<section class="section-content affiliate-section" id="affiliate">
-<h2>🛍 Recommended Study Products</h2>
-<div class="affiliate-item">
-<img src="https://m.media-amazon.com/images/I/61b9t1r0OVL._SL1500_.jpg" alt="Laptop">
-<div>
-<p><b>Best Laptop for Students</b></p>
-<a href="https://amzn.to/" target="_blank">Buy on Amazon</a>
+<<section class="section-content affiliate-section" id="affiliate">
+<h2 style="text-align:center; margin-bottom:30px;">🛍 Recommended Study Products</h2>
+
+<div class="affiliate-slideshow" style="max-width:700px; margin:0 auto; position:relative; overflow:hidden; border-radius:15px; box-shadow:0 8px 20px rgba(0,0,0,0.2);">
+
+    <!-- Laptop Product -->
+    <div class="product-slide" style="display:block; text-align:center; padding:20px; background:#f9f9f9;">
+        <div class="product-images" style="position:relative; max-width:400px; margin:0 auto; border-radius:15px;">
+            <img src="C:/Users/RAUSHAN/Downloads/study hub/Screenshot 2025-10-19 203928.png" class="prod-img" style="width:100%; border-radius:15px;">
+            <img src="C:/Users/RAUSHAN/Downloads/study hub/Screenshot 2025-10-19 203940.png" class="prod-img" style="width:100%; border-radius:15px; display:none;">
+            <img src="C:/Users/RAUSHAN/Downloads/study hub/Screenshot 2025-10-19 211550.png" class="prod-img" style="width:100%; border-radius:15px; display:none;">
+        </div>
+        <p style="font-size:1.2em; font-weight:bold; color:#0056b3; margin-top:15px;">Best Laptop for Students</p>
+        <a href="https://amzn.to/49bJsiK" target="_blank"
+           style="display:inline-block; margin-top:10px; padding:12px 25px; background:#00aaff; color:#fff; border-radius:10px; font-weight:bold; transition:0.3s;">
+           Buy on Amazon
+        </a>
+    </div>
+
+    <!-- Calculator Product -->
+    <div class="product-slide" style="display:none; text-align:center; padding:20px; background:#f9f9f9;">
+        <div class="product-images" style="position:relative; max-width:400px; margin:0 auto; border-radius:15px;">
+            <img src="C:/Users/RAUSHAN/Downloads/study hub/Screenshot 2025-10-19 210817.png" class="prod-img" style="width:100%; border-radius:15px;">
+            <img src="C:/Users/RAUSHAN/Downloads/study hub/Screenshot 2025-10-19 210830.png" class="prod-img" style="width:100%; border-radius:15px; display:none;">
+            <img src="C:/Users/RAUSHAN/Downloads/study hub/Screenshot 2025-10-19 210845.png" class="prod-img" style="width:100%; border-radius:15px; display:none;">
+        </div>
+        <p style="font-size:1.2em; font-weight:bold; color:#0056b3; margin-top:15px;">Scientific Calculator (Casio FX-991EX)</p>
+        <a href="https://amzn.to/4q9AJ6K" target="_blank"
+           style="display:inline-block; margin-top:10px; padding:12px 25px; background:#00aaff; color:#fff; border-radius:10px; font-weight:bold; transition:0.3s;">
+           View Product
+        </a>
+    </div>
+
+    <!-- Add more products here in same format -->
+
 </div>
-</div>
-<div class="affiliate-item">
-<img src="https://m.media-amazon.com/images/I/71T6POn9eWL._SL1500_.jpg" alt="Calculator">
-<div>
-<p><b>Scientific Calculator (Casio FX-991EX)</b></p>
-<a href="https://amzn.to/" target="_blank">View Product</a>
-</div>
-</div>
+
+<script>
+// Product Slideshow
+let prodIndex = 0;
+const productSlides = document.querySelectorAll(".affiliate-slideshow .product-slide");
+showProductSlide();
+
+function showProductSlide(){
+    productSlides.forEach(slide => slide.style.display = "none");
+    prodIndex++;
+    if(prodIndex > productSlides.length) prodIndex = 1;
+    productSlides[prodIndex-1].style.display = "block";
+    showImages(prodIndex-1);
+    setTimeout(showProductSlide, 8000); // 8s per product
+}
+
+// Image slideshow inside each product
+function showImages(productIdx){
+    const images = productSlides[productIdx].querySelectorAll(".prod-img");
+    let imgIndex = 0;
+    images.forEach(img => img.style.display="none");
+    images[imgIndex].style.display="block";
+
+    if(images.length < 2) return; // Skip if only 1 image
+
+    setInterval(()=>{
+        images[imgIndex].style.display="none";
+        imgIndex++;
+        if(imgIndex >= images.length) imgIndex = 0;
+        images[imgIndex].style.display="block";
+    }, 5500); // 2.5s per image
+}
+</script>
 </section>
+
+
 
 <!-- ✅ Blog + AdSense -->
 <section class="section-content blog-section" id="blog">
