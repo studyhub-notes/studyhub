@@ -1,230 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <!-- Basic SEO -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Google Search Console Verification -->
-    <meta name="google-site-verification" content="8de6d9b88c5482e8.html">
-
-    <!-- Title for SEO -->
-    <title>Free BCA & Engineering Notes PDF | StudyHub</title>
-
-    <!-- Meta Description for SEO -->
-    <meta name="description" content="Download free study notes PDF for BCA, BSc, and Engineering students. Access DBMS, DSA, Python, JavaScript, Computer Graphics notes and more on StudyHub.">
-
-    <!-- Meta Keywords for SEO -->
-    <meta name="keywords" content="Free Notes PDF, BCA Notes, DBMS Notes, DSA Notes, Python Notes, JavaScript Notes, Computer Graphics Notes, Engineering Study Material">
-
-    <!-- Canonical URL (Optional but Good for SEO) -->
-    <link rel="canonical" href="https://yourwebsite.com/">
-
-    <!-- Favicon (Optional but Recommended) -->
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-
-    <!-- CSS Styles -->
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-
-        header {
-            background-color: #0056b3;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        nav a {
-            color: #fff;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .hero {
-            padding: 50px;
-            background: #e0f0ff;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 3em;
-            margin-bottom: 10px;
-        }
-
-        .notes-section {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            padding: 20px;
-        }
-
-        .note-card {
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            text-align: center;
-            transition: transform 0.2s;
-        }
-
-        .note-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .note-card h3 {
-            margin-bottom: 10px;
-        }
-
-        .note-card a {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 10px 15px;
-            background: #0056b3;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-
-        /* Contact Form Styles */
-        .contact-section {
-            padding: 40px 20px;
-            background-color: #ffffff;
-            max-width: 600px;
-            margin: 0 auto 80px auto;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .contact-section h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .contact-form label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-
-        .contact-form input,
-        .contact-form textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
-
-        .contact-form button {
-            background-color: #0056b3;
-            color: #fff;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .contact-form button:hover {
-            background-color: #004494;
-        }
-
-        footer {
-            background: #333;
-            color: #fff;
-            text-align: center;
-            padding: 15px 0;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>📚 StudyHub – All Branch Notes & PYQs</title>
+<style>
+body { font-family: 'Arial', sans-serif; margin:0; padding:0; background:#f0f8ff; color:#333; }
+a { text-decoration:none; }
+header {
+    background: linear-gradient(90deg,#0056b3,#00aaff);
+    color:#fff;
+    padding:20px 0;
+    text-align:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+header h1 { margin:0; font-size:2.5em; }
+nav a { color:#fff; margin:0 15px; font-weight:bold; cursor:pointer; transition:0.3s; }
+nav a:hover { color:#fffa; text-decoration:underline; }
+.hero { text-align:center; padding:60px 20px; background: linear-gradient(120deg,#cce6ff,#99ddff); }
+.hero h1 { font-size:3em; color:#0056b3; margin-bottom:10px; }
+.hero p { font-size:1.2em; }
+.categories { display:flex; flex-wrap:wrap; justify-content:center; max-width:1100px; margin:30px auto; gap:20px; }
+.category-card { background: linear-gradient(135deg,#ffffff,#d4f1ff); width:250px; border-radius:15px; text-align:center; padding:20px; cursor:pointer; box-shadow:0 5px 15px rgba(0,0,0,0.1); transition:0.3s; }
+.category-card:hover { transform:translateY(-5px); box-shadow:0 8px 20px rgba(0,0,0,0.2); }
+.category-card img { width:80px; height:80px; margin-bottom:15px; }
+.category-card h3 { color:#0056b3; }
+.section-content { max-width:1100px; margin:30px auto; padding:0 20px; display:none; }
+details { background:#fff; margin-bottom:15px; border-radius:10px; box-shadow:0 3px 8px rgba(0,0,0,0.1); overflow:hidden; }
+summary { padding:15px; font-size:1.2em; color:#fff; background: linear-gradient(90deg,#0056b3,#00aaff); cursor:pointer; transition:0.3s; }
+summary:hover { background: linear-gradient(90deg,#004494,#0077cc); }
+.semester { padding:15px; background:#f9f9f9; border-top:1px solid #ddd; }
+.semester h4 { color:#0056b3; }
+.links a { display:inline-block; margin:5px; padding:8px 15px; background:#00aaff; color:#fff; border-radius:5px; transition:0.3s; }
+.links a:hover { background:#0056b3; }
+.contact-section { background:#fff; max-width:600px; margin:50px auto; padding:30px; border-radius:15px; box-shadow:0 4px 12px rgba(0,0,0,0.1); text-align:center; }
+.contact-section h2 { color:#0056b3; margin-bottom:20px; }
+.contact-section a { color:#0056b3; font-weight:bold; }
+.contact-section a:hover { text-decoration:underline; }
+footer { background:#333; color:#fff; text-align:center; padding:15px 0; margin-top:50px; }
+@media(max-width:768px){ .categories { flex-direction:column; align-items:center; } }
+</style>
 </head>
-
 <body>
 
-    <header>
-        <h1>📚 StudyHub</h1>
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">Notes</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+<header>
+<h1>📚 StudyHub</h1>
+<nav>
+<a onclick="scrollToSection('home')">Home</a>
+<a onclick="showSection('sbte')">SBTE Polytechnic Notes</a>
+<a onclick="showSection('cbse10')">Class 10 CBSE Notes</a>
+<a onclick="showSection('cbse12')">Class 12 CBSE Notes</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
 
-    <div class="hero">
-        <h1>Welcome to StudyHub!</h1>
-        <p>Your one-stop solution for study notes, PDFs, and more!</p>
-    </div>
+<div class="hero" id="home">
+<h1>Welcome to StudyHub!</h1>
+<p>Select a category to access study materials.</p>
+</div>
 
-    <section class="notes-section">
+<section class="categories">
+<div class="category-card" onclick="showSection('sbte')">
+<img src="https://img.icons8.com/color/96/polytechnic.png" alt="SBTE Logo">
+<h3>SBTE Polytechnic</h3>
+</div>
+<div class="category-card" onclick="showSection('cbse10')">
+<img src="https://img.icons8.com/color/96/school.png" alt="CBSE 10 Logo">
+<h3>Class 10 CBSE</h3>
+</div>
+<div class="category-card" onclick="showSection('cbse12')">
+<img src="https://img.icons8.com/color/96/graduation-cap.png" alt="CBSE 12 Logo">
+<h3>Class 12 CBSE</h3>
+</div>
+</section>
 
-        <div class="note-card">
-            <h3>DSA Notes</h3>
-            <p>Download PDF notes</p>
-            <a href="d.s cth.pdf" download>Download</a>
-        </div>
+<section class="section-content" id="sbte">
+<h2>SBTE Polytechnic Notes</h2>
 
-        <div class="note-card">
-            <h3>Python Notes</h3>
-            <p>Free PDFs available</p>
-            <a href="Python Complete Notes.pdf" download>Download</a>
-        </div>
+<script>
+const branches = [
+  {name:"CSE", icon:"https://img.icons8.com/color/48/computer.png"},
+  {name:"EEE", icon:"https://img.icons8.com/color/48/electronics.png"},
+  {name:"ECE", icon:"https://img.icons8.com/color/48/satellite-dish.png"},
+  {name:"ME", icon:"https://img.icons8.com/color/48/engine.png"},
+  {name:"Civil", icon:"https://img.icons8.com/color/48/bridge.png"}
+];
+const subjects = ["Subject 1","Subject 2","Subject 3","Subject 4","Subject 5"];
+const types = ["Notes","PYQ","Model Paper"];
+const baseURL = "pdfs/";
 
-        <div class="note-card">
-            <h3>JavaScript Notes</h3>
-            <p>In PDF format</p>
-            <a href="JavaScript-Notes.pdf" download>Download</a>
-        </div>
+for(let b=0;b<branches.length;b++){
+    document.write('<details><summary><img src="'+branches[b].icon+'" style="width:30px;vertical-align:middle;margin-right:10px;">'+branches[b].name+' Branch</summary>');
+    for(let s=1;s<=6;s++){
+        document.write('<div class="semester"><h4>Semester '+s+'</h4>');
+        for(let t=0;t<types.length;t++){
+            document.write('<details><summary>'+types[t]+'</summary><div class="links">');
+            for(let sub=0;sub<subjects.length;sub++){
+                let fileName = branches[b].name+"_Sem"+s+"_Subject"+(sub+1)+"_"+types[t]+".pdf";
+                document.write('<a href="'+baseURL+fileName+'" target="_blank">'+subjects[sub]+'</a>');
+            }
+            document.write('</div></details>');
+        }
+        document.write('</div>');
+    }
+    document.write('</details>');
+}
+</script>
+</section>
 
-        <div class="note-card">
-            <h3>Computer Graphics Notes</h3>
-            <p>Free PDFs available</p>
-            <a href="COMPUTER GRAPHICS COMPLETE NOTES.pdf" download>Download</a>
-        </div>
+<section class="section-content" id="cbse10">
+<h2>Class 10 CBSE Notes</h2>
+<details><summary>Maths</summary><div class="links"><a href="#">Notes</a><a href="30-S-1 Maths Standard.pdf">PYQ</a><a href="MathsX model.pdf">Model Paper</a></div></details>
+<details><summary>Science</summary><div class="links"><a href="#">Notes</a><a href="31-S-1_Science.pdf">PYQ</a><a href="science model.pdf">Model Paper</a></div></details>
+<details><summary>Social Science</summary><div class="links"><a href="#">Notes</a><a href="32-S-1_Social Science.pdf">PYQ</a><a href="#">Model Paper</a></div></details>
+<details><summary>Hindi</summary><div class="links"><a href="#">Notes</a><a href="3-S-1_Hindi Course A.pdf">PYQ</a><a href="#">Model Paper</a></div></details>
+</section>
 
-        <div class="note-card">
-            <h3>DBMS Notes</h3>
-            <p>In PDF format</p>
-            <a href="DBMS PDF NOTES.pdf.pdf" download>Download</a>
-        </div>
+<section class="section-content" id="cbse12">
+<h2>Class 12 CBSE Notes</h2>
+<details><summary>Physics</summary><div class="links"><a href="#">Notes</a><a href="#">PYQ</a><a href="#">Model Paper</a></div></details>
+<details><summary>Chemistry</summary><div class="links"><a href="#">Notes</a><a href="#">PYQ</a><a href="#">Model Paper</a></div></details>
+<details><summary>Mathematics</summary><div class="links"><a href="#">Notes</a><a href="#">PYQ</a><a href="#">Model Paper</a></div></details>
+</section>
 
-    </section>
+<section class="contact-section" id="contact">
+<h2>📞 Contact Information</h2>
+<p>
+<strong>Name:</strong> Misha Kumari<br>
+<strong>Branch:</strong> Computer Science & Engineering (CSE)<br>
+<strong>College:</strong> Government Polytechnic College, Aurangabad<br>
+<strong>Phone:</strong> <a href="tel:+919508408062">+91 95084 08062</a><br>
+<strong>Email:</strong> <a href="mailto:mishakumari@gmail.com">mishakumari@gmail.com</a>
+</p>
+</section>
 
-    <!-- Contact Form Section -->
-    <section class="contact-section" id="contact">
-        <h2>Contact Us</h2>
-        <form class="contact-form" action="https://formsubmit.co/anil2547824@gmail.com" method="POST">
+<footer>
+&copy; 2025 StudyHub | All Rights Reserved
+</footer>
 
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Your Name" required>
-
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="Your Email" required>
-
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
-
-            <!-- Optional: Disable captcha and redirect -->
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_next" value="https://yourwebsite.com/thankyou.html">
-
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
-
-    <footer>
-        &copy; 2025 StudyHub | Connect on Instagram, YouTube
-    </footer>
+<script>
+function scrollToSection(id){ document.getElementById(id).scrollIntoView({behavior:"smooth"}); }
+function showSection(id){ document.querySelectorAll('.section-content').forEach(s => s.style.display='none'); document.getElementById(id).style.display='block'; scrollToSection(id); }
+</script>
 
 </body>
-
 </html>
-
