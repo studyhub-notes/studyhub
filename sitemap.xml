@@ -10,11 +10,13 @@
 
   <!-- Example: Add more pages if needed -->
   <url>
-    <loc>https://studyhub-notes.github.io/studyhub/contact.html</loc>
+    <loc>https://studyhub-notes.github.io/studyhub/studyhub/</loc>
+
     <lastmod>2025-03-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
 </urlset>
+
 
